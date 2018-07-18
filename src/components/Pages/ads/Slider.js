@@ -14,7 +14,7 @@ class Slider extends Component {
 
     render() {
         return (
-            <div id="adImages" className="col--full pa-f--s mb-m--s mb-f--m ad-images mr-m--m">
+            <div id="adImages" className="col--full pa-f--s mb-m--s mb-f--m ad-images mr-m--l mr-f--s">
                 <ul className="border">
                     <li>
                         <img className="img-fluid" src={prodductImage} alt=""/>

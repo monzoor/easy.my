@@ -468,7 +468,7 @@ body {
 
 .container--center-main {
   width: auto;
-  max-width: 1105px;
+  max-width: 1122px;
   float: none;
   display: block;
   margin-right: auto;
@@ -1281,15 +1281,17 @@ header {
   .border--0 {
     border: 0 solid; }
 
-@media only screen and (max-width: 768px) {
-  .d--none {
-    display: none !important; }
-  .d--inline {
-    display: inline !important; }
-  .d--inline-block {
-    display: inline-block !important; }
-  .d--block {
-    display: block !important; } }
+.d--none {
+  display: none !important; }
+
+.d--inline {
+  display: inline !important; }
+
+.d--inline-block {
+  display: inline-block !important; }
+
+.d--block {
+  display: block !important; }
 
 @media only screen and (min-width: 769px) {
   .d-m--none {

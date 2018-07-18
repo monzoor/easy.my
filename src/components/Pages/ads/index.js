@@ -24,14 +24,14 @@ class Home extends Component {
                 <div id="adDetails" className="container--fluid pt-m--s mt-xl--m">
                     <Breadcrumb></Breadcrumb>
                     <div className="row mb-s--s">
-                        <div className="col--full pa-f--m">
+                        <div className="col--full pa-f--m pl-m--m">
                             <h1 id="adTitle" className="h4 base-text"><strong>Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</strong></h1>
                         </div>
                     </div>
                     <div className="row">
 
                         <Slider></Slider>
-                        
+
                         <div className="col--full ad-infos pt-m--m">
                             <div className="row ma-f--s mb-s--s pl-m--m">
                                 <div id="wishList" className="secondary-text v-align--middle float--left">

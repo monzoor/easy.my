@@ -14,7 +14,7 @@ class Breadcrumb extends Component {
 
     render() {
         return (
-            <div className="row mb-s--s">
+            <div className="row mb-s--s d--none d-m--none d-l--block pl-m--m">
                 <ol className="breadcrumb text-xs">
                     <li className="breadcrumb-item">
                         <Link to="/" className="base-text">Home</Link>
