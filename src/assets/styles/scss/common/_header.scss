@@ -1,0 +1,9 @@
+header {
+    height: 80px;
+    padding: 25px 0;
+    @media #{$medium-and-up} {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}

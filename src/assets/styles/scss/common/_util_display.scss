@@ -1,0 +1,21 @@
+
+
+@media #{$small-and-down} {
+    .d--none         { display: none !important; }
+    .d--inline       { display: inline !important; }
+    .d--inline-block { display: inline-block !important; }
+    .d--block        { display: block !important; }
+}
+@media #{$medium-and-up} {
+    .d-m--none         { display: none !important; }
+    .d-m--inline       { display: inline !important; }
+    .d-m--inline-block { display: inline-block !important; }
+    .d-m--block        { display: block !important; }
+}
+
+@media #{$large-and-up} {
+    .d-l--none         { display: none !important; }
+    .d-l--inline       { display: inline !important; }
+    .d-l--inline-block { display: inline-block !important; }
+    .d-l--block        { display: block !important; }
+}

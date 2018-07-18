@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'easymy';
+  src:  url('../fonts/easymy.eot?du3cml');
+  src:  url('../fonts/easymy.eot?du3cml#iefix') format('embedded-opentype'),
+    url('../fonts/easymy.ttf?du3cml') format('truetype'),
+    url('../fonts/easymy.woff?du3cml') format('woff'),
+    url('../fonts/easymy.svg?du3cml#easymy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'easymy' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+  content: "\e906";
+}
+.icon-mail:before {
+  content: "\e904";
+}
+.icon-phone:before {
+  content: "\e905";
+}
+.icon-user:before {
+  content: "\e900";
+}
+.icon-share:before {
+  content: "\e901";
+}
+.icon-heart-o:before {
+  content: "\e902";
+}
+.icon-heart:before {
+  content: "\e903";
+}

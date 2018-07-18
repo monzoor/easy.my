@@ -1,0 +1,49 @@
+.icon-chat {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.icon-mail {
+    font-size: 21px;
+    vertical-align: middle;
+}
+
+#naviation {
+    position: fixed;
+    bottom: 0;
+    @extend .bg-white;
+    height: 68px;
+}
+
+#adDetails {
+
+    @media #{$medium-and-up} {
+        .ad-infos {
+            width: 320px;
+            border: 1px solid #B9B9B9;
+            margin-left: -1px;
+        }
+        .ad-images {
+            width: calc(100% - 320px);
+        }
+        #naviation {
+            position: relative;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.16);
+            border-left: 1px solid #B9B9B9;
+            border-top: 1px solid #B9B9B9;
+            height: auto;
+            margin-left: -1px;
+        }
+        .btn-group {
+            border-spacing: 0;
+            .btn {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+    }
+    @media #{$large-and-up} {
+        .ad-images {
+            width: calc(100% - 339px);
+        }
+    }
+}

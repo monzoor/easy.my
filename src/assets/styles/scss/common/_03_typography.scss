@@ -1,0 +1,103 @@
+/**********************
+*					  *
+*   Typography		  *
+*					  *
+***********************/
+
+//== Typography mixin
+//## Rem converter
+
+@function rem($pixels, $context: $baseFontSize) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1rem;
+}
+
+// font size creator
+@function fontSizer($size, $font_family: $font-family-open-sans) {
+	@return #{$size}px/#{$size+ 6}px $font_family;
+}
+// ============================================================
+
+/*
+	Typography
+	==========
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:100,500,900');
+
+$font-family-open-sans: 'Open Sans', sans-serif !default;
+$baseFontSize : 14 !default;
+
+
+//== Base
+//
+//## Global font base including media query
+html {
+	font: fontSizer($baseFontSize); // 14px/24px
+	// @include breakpoint($tablet) {
+	// 	font: baseFontSize($baseFontSize - 2, normal); // 12px/22px
+	// }
+	// @include breakpoint($mobile) {
+	// 	font: baseFontSize($baseFontSize - 4, normal); // 10px/20px
+	// }
+}
+
+
+
+//== Headings
+$headings-margin-bottom:      ($b-space / 2) !default;
+$headings-margin-top:         0 !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom:              $headings-margin-bottom;
+  margin-top:                 $headings-margin-top;
+  font-family:                $headings-font-family;
+  font-weight:                $headings-font-weight;
+  line-height:                $headings-line-height;
+  color:                      $headings-color;
+}
+
+
+$font-size-base:              $baseFontSize !default;
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base * .86 !default;
+
+h1, .h1 { font: fontSizer($h1-font-size) }
+h2, .h2 { font: fontSizer($h2-font-size) }
+h3, .h3 { font: fontSizer($h3-font-size) }
+h4, .h4 { font: fontSizer($h4-font-size) }
+h5, .h5 { font: fontSizer($h5-font-size) }
+h6, .h6 { font: fontSizer($h6-font-size) }
+
+//== Paragraphs
+//
+//## Global paragraph styles
+
+p {
+	font: fontSizer($baseFontSize, $font-family-open-sans);
+	margin: 0 0 1em 0;
+	@extend .base-text;
+}
+
+.text-xs { font: fontSizer($font-size-base * .8) }
+.text-s {  @extend .h6; }
+.text-m {  @extend .h4; }
+.text-l {  @extend .h3; }
+.text-xl { @extend .h2; }
+.text-xxl {  @extend .h1; }

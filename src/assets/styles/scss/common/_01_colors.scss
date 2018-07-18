@@ -1,0 +1,52 @@
+// Utility Color Classes
+
+
+
+
+$easy: (
+    "white":         #FFFFFF,
+    "red":           #E01A1A,
+
+    // Text colors
+    "base":          #333333,
+    "secondary":     #707070,
+
+    // miscellaneous
+    "icon-white":    #FAFAFA,
+    "border":        #B9B9B9,
+
+    "transparent":   transparent,
+
+    // social
+    "facebook":      #3B5998,
+    "linkedin":      #007BB5,
+    "google":        #E02F2F,
+    "twitter":       #00aced,
+);
+
+$colors: (
+    "easy": $easy
+) !default;
+
+// Color Classes
+@each $color, $color_value in $easy {
+  .bg-#{$color} {
+    background-color: $color_value !important;
+  }
+  .#{$color}-text {
+    color: $color_value!important;
+  }
+}
+
+// usage: color("esay", "name_of_color")
+
+@function color-maker($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
