@@ -1388,6 +1388,9 @@ header {
   padding: 0;
   margin: 0 0 1em 0; }
 
+.cursor {
+  cursor: pointer; }
+
 /**********************
 *                     *
 *   Button            *

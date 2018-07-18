@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter, Link} from 'react-router-dom';
+import { withRouter, Link} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 import prodductImage from './../../../assets/images/demo/nintendo.jpg';
 import Breadcrumb from './../../Common/Breadcrumb';
@@ -12,15 +13,30 @@ import Slider from './Slider';
 class Home extends Component {
     constructor (props) {
         super(props);
-        console.log(this.props);
+        console.log(this.props.match.params.adSlug);
+        this.state = {
+            wishList: false
+        }
+
+        this.onClick = this.onClick.bind(this);
     }
     componentDidMount() {
         // this.props.dispatch(fetchPosts())
     }
+    onClick = (e) => {
+
+        this.setState(prevState => ({
+          wishList: !prevState.wishList
+        }))
+    }
     render() {
+        const {wishList} = this.state;
 
         return (
             <div className="container--center-main pa-f--m pa-f--s">
+                <Helmet>
+                    <title>{this.props.match.params.adSlug}</title>
+                </Helmet>
                 <div id="adDetails" className="container--fluid pt-m--s mt-xl--m">
                     <Breadcrumb></Breadcrumb>
                     <div className="row mb-s--s">
@@ -34,11 +50,11 @@ class Home extends Component {
 
                         <div className="col--full ad-infos pt-m--m">
                             <div className="row ma-f--s mb-s--s pl-m--m">
-                                <div id="wishList" className="secondary-text v-align--middle float--left">
-                                    <strong><i className="icon-heart-o text-m"></i></strong>
+                                <div id="wishList" className="secondary-text v-align--middle float--left cursor" onClick={this.onClick}>
+                                    <strong><i className={`text-m ${(wishList) ? 'icon-heart red-text' : 'icon-heart-o'}`}></i></strong>
                                     <span className="ml-s--s">Wishlist</span>
                                 </div>
-                                <div id="share" className="secondary-text v-align--middle float--left ml-l--s">
+                                <div id="share" className="secondary-text v-align--middle float--left ml-l--s cursor">
                                     <strong><i className="icon-share text-m"></i></strong>
                                     <span className="ml-s--s">Share</span>
                                 </div>
