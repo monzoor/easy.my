@@ -1,5 +1,4 @@
-import { GET_AD } from './types';
-import { NO_AD_FOUND } from './types';
+import { GET_AD, NO_AD_FOUND } from './types';
 
 export function getAd (uid, slug) {
     return (dispatch) => {
@@ -21,6 +20,34 @@ export function getAd (uid, slug) {
                     type: GET_AD,
                     payload: ad
                 })
+            });
+        })
+    }
+}
+export function updateWishList (uid, wishlist) {
+    return (dispatch) => {
+        dispatch ({
+            type: 'CLEAR_MESSAGES'
+        });
+        return fetch(process.env.REACT_APP_API_HOST+'/ads/' + uid, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            	"wishlist": wishlist
+            })
+        })
+        .then ((response) => {
+            if (!response.ok) {
+                return response.json().then(() => {
+                    errorDispatch (dispatch, response)
+                });
+            }
+            return response.json().then((ad) => {
+                if (ad.length === 0) {
+                    errorDispatch (dispatch, response)
+                }
             });
         })
     }

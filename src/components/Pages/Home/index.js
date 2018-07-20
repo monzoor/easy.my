@@ -6,10 +6,7 @@ import {withRouter, Link} from 'react-router-dom';
 import { getAds } from './homeAction';
 
 class Home extends Component {
-    constructor (props) {
-        super(props);
-        console.log(this.props);
-    }
+
     componentDidMount() {
         this.props.dispatch(getAds())
     }
@@ -53,7 +50,6 @@ class Home extends Component {
 
 
 const mapStateToProps = (state) => {
-    console.log('====1====',state.ads.payload);
     return {
         ads: state.ads.payload
     };

@@ -8,7 +8,7 @@
         "id": 1,
         "name": "Games & Console"
       },
-      "wishlist": false,
+      "wishlist": true,
       "productDetails": {
         "price": "1,289",
         "condition": "Brand new in the box",
@@ -59,7 +59,7 @@
         "name": "Cameras & Photography",
         "id": 44
       },
-      "wishlist": true,
+      "wishlist": false,
       "productDetails": {
         "price": "6,280",
         "condition": "Second-hand (Used)",

@@ -1,6 +1,4 @@
-import { GET_AD } from './types';
-import { NO_AD_FOUND } from './types';
-
+import { GET_AD, NO_AD_FOUND } from './types';
 
 const initialState = {
     payload: [],

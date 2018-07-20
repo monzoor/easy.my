@@ -7,7 +7,7 @@ import Breadcrumb from './../../Common/Breadcrumb';
 import Loader from './../../Common/loader';
 import Slider from './Slider';
 
-import { getAd } from './adAction'
+import { getAd, updateWishList } from './adAction'
 
 class AdDetails extends Component {
     constructor (props) {
@@ -38,7 +38,9 @@ class AdDetails extends Component {
     onClickWishList = (e) => {
         this.setState(prevState => ({
           wishList: !prevState.wishList
-        }))
+      }));
+      const uid = this.props.match.params.uid;
+      this.props.dispatch(updateWishList(uid, !this.state.wishList));
     }
     onClickPhone = (e) => {
         this.setState({
@@ -47,7 +49,6 @@ class AdDetails extends Component {
     }
     render() {
         const {wishList, isLoading, phone} = this.state;
-        console.log(wishList);
         const hasErros = this.props.ad.hasErros;
         const ad = this.props.ad[0];
 
