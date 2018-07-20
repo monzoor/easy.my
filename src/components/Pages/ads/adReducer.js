@@ -1,24 +1,25 @@
-import { FETCH_POSTS, NEW_POST, CATEGORIES } from '../actions/types';
+import { GET_AD } from './types';
+import { NO_AD_FOUND } from './types';
 
 
 const initialState = {
-    items: [],
-    item: {}
+    payload: [],
 }
 
 export default function (state = initialState, action) {
-    // console.log('====1===',action.type);
+    // console.log('====2===',action);
     switch (action.type) {
-        case CATEGORIES:
+        case GET_AD:
             return {
                 ...state,
-                cats: action.payload
+                payload: action.payload
             }
-        case FETCH_POSTS:
+        case NO_AD_FOUND: {
             return {
                 ...state,
-                items: action.payload
+                payload: action.errorInfo
             }
+        }
         default:
             return state
     }

@@ -1,0 +1,157 @@
+{
+  "ads": [
+    {
+      "id": "1",
+      "slug": "nintendo-switch-neon-joy-con",
+      "name": "Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector",
+      "category": {
+        "id": 1,
+        "name": "Games & Console"
+      },
+      "wishlist": false,
+      "productDetails": {
+        "price": "1,289",
+        "condition": "Brand new in the box",
+        "location": "Bangsar south, Kuala lumpur",
+        "images": [
+          "https://static-ca.ebgames.ca/images/products/728999/4scrmax1.jpg"
+        ]
+      },
+      "sellerInfos": {
+        "name": "Takeshi Nakamura",
+        "type": "Private seller",
+        "avatar": null,
+        "phone": "01675738909",
+        "email": "test@mail.com"
+      },
+      "breadcrumb": [
+        {
+          "position": 1,
+          "url": "/",
+          "name": "Home",
+          "active": false
+        },
+        {
+          "position": 2,
+          "url": "/electronics",
+          "name": "Electronics",
+          "active": false
+        },
+        {
+          "position": 3,
+          "url": "/games-console",
+          "name": "Games & Console",
+          "active": false
+        },
+        {
+          "position": 4,
+          "url": "/",
+          "name": "Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "slug": "canon-5D-mark-iii-mark-3-fullbox",
+      "name": "Canon 5D mark iii Mark 3 Fullbox",
+      "category": {
+        "name": "Cameras & Photography",
+        "id": 44
+      },
+      "wishlist": true,
+      "productDetails": {
+        "price": "6,280",
+        "condition": "Second-hand (Used)",
+        "location": "Selangor - Batu Caves",
+        "images": [
+          "https://www.dpreview.com/files/p/articles/1111600639/images/frontpage.jpeg"
+        ]
+      },
+      "sellerInfos": {
+        "name": "Dlsr Maniac",
+        "type": "Private seller",
+        "avatar": null,
+        "phone": "01622244556",
+        "email": "maniac@mail.com"
+      },
+      "breadcrumb": [
+        {
+          "position": 1,
+          "url": "/",
+          "name": "Home",
+          "active": false
+        },
+        {
+          "position": 2,
+          "url": "/electronics",
+          "name": "Electronics",
+          "active": false
+        },
+        {
+          "position": 3,
+          "url": "/cameras-photography",
+          "name": "Cameras & Photography",
+          "active": false
+        },
+        {
+          "position": 4,
+          "url": "",
+          "name": "Canon 5D mark iii Mark 3 Fullbox",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "slug": "ps4-tahun-2017-for-sale",
+      "name": "Ps4 tahun 2017 for sale",
+      "category": {
+        "name": "Games & Console",
+        "id": 1
+      },
+      "wishlist": true,
+      "productDetails": {
+        "price": "1,300",
+        "condition": "Second-hand (Used)",
+        "location": "Pahang - Kuantan",
+        "images": [
+          "http://assets1.ignimgs.com/2017/11/29/ps4pro1280jpg-f4857f-1280w-1511960580363_1280w.jpg"
+        ]
+      },
+      "sellerInfos": {
+        "name": "amirul fahmi",
+        "type": "Private seller",
+        "avatar": null,
+        "phone": "01717017633",
+        "email": "newtest@mail.com"
+      },
+      "breadcrumb": [
+        {
+          "position": 1,
+          "url": "/",
+          "name": "Home",
+          "active": false
+        },
+        {
+          "position": 2,
+          "url": "/electronics",
+          "name": "Electronics",
+          "active": false
+        },
+        {
+          "position": 3,
+          "url": "/games-console",
+          "name": "Games & Console",
+          "active": false
+        },
+        {
+          "position": 4,
+          "url": "",
+          "name": "Ps4 tahun 2017 for sale",
+          "active": true
+        }
+      ]
+    }
+  ]
+}

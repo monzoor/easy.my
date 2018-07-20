@@ -45,6 +45,14 @@
         width: 100%;
     }
 }
+.col--one-fifth {
+    padding-right: 10px;
+    padding-left: 10px;
+    @include column(1/5, $gutter: 2);
+    @media #{$small-and-down} {
+        @include column(1/2, $gutter: 0);
+    }
+}
 
 .col--two-third {
     padding-right: 10px;
