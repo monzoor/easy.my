@@ -8,6 +8,9 @@
     margin-right: -10px;
     margin-left: -10px;
 }
+.content {
+    min-height: calc(100vh - 270px);
+}
 .container {
     &--center-main {
         @include center($container-width);

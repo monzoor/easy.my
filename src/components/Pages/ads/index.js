@@ -7,7 +7,7 @@ import Breadcrumb from './../../Common/Breadcrumb';
 import Loader from './../../Common/loader';
 import Slider from './Slider';
 
-import { getAd, updateWishList } from './adAction'
+import { getAd, updateWishList } from './adAction';
 
 class AdDetails extends Component {
     constructor (props) {
@@ -21,20 +21,26 @@ class AdDetails extends Component {
         this.onClick = this.onClickWishList.bind(this);
         this.onClick = this.onClickPhone.bind(this);
     }
+
     componentDidMount() {
-        const uid = this.props.match.params.uid,
-              slug = this.props.match.params.adSlug;
+        const uid = this.props.match.params.uid, // get uid from url
+              slug = this.props.match.params.adSlug; // get ad slug from url
         this.props.dispatch(getAd(uid, slug));
     }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.ad !== this.props.ad) {
             this.setState({
-                wishList: nextProps.ad[0].wishlist,
+                wishList: (nextProps.ad.hasErros) ? false : nextProps.ad[0].wishlist,
                 isLoading: false,
-                phone: nextProps.ad[0].sellerInfos.phone.slice(0, -3).concat('xxx'),
+                phone: (nextProps.ad.hasErros)? '' : nextProps.ad[0].sellerInfos.phone.slice(0, -3).concat('xxx') // set xxx in number
             })
         }
     }
+    /**
+     * Update wishlist button
+     * @param  {[type]} e [event]
+     */
     onClickWishList = (e) => {
         this.setState(prevState => ({
           wishList: !prevState.wishList
@@ -42,6 +48,11 @@ class AdDetails extends Component {
       const uid = this.props.match.params.uid;
       this.props.dispatch(updateWishList(uid, !this.state.wishList));
     }
+
+    /**
+     * remove xxx from phone number
+     * @param  {[type]} e event
+     */
     onClickPhone = (e) => {
         this.setState({
             phone: this.props.ad[0].sellerInfos.phone
@@ -52,6 +63,11 @@ class AdDetails extends Component {
         const hasErros = this.props.ad.hasErros;
         const ad = this.props.ad[0];
 
+        /**
+         *
+         * @param isLoading @type {bool} display preloader
+         * @param hasErros @type {bool}  render 404 page
+         */
         return (isLoading) ?  ( <Loader></Loader> ) : (hasErros) ? <Redirect to={{ pathname: this.props.match.url, state: { status: 404 }}}/> :
 
          (

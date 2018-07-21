@@ -466,6 +466,9 @@ body {
   margin-right: -10px;
   margin-left: -10px; }
 
+.content {
+  min-height: calc(100vh - 270px); }
+
 .container--center-main {
   width: auto;
   max-width: 1122px;

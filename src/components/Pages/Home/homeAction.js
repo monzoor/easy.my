@@ -1,7 +1,10 @@
-import { GET_ADS } from './types';
-import { NO_ADS_FOUND } from './types';
+import { GET_ADS, NO_ADS_FOUND } from './types';
 
-export function getAds (uid, slug) {
+/**
+ * get ad lists
+ * @return {[object]}      ads lists
+ */
+export function getAds () {
     return (dispatch) => {
         dispatch ({
             type: 'CLEAR_MESSAGES'

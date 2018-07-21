@@ -5,7 +5,6 @@ const initialState = {
 }
 
 export default function (state = initialState, action) {
-    // console.log('====2===',action);
     switch (action.type) {
         case GET_AD:
             return {

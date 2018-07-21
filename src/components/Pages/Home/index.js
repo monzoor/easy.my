@@ -25,7 +25,6 @@ class Home extends Component {
                     <div className="col--full">
                         <div className="row ma-m--m">
                             {ads.map((ad, index) => (
-
                                 <div key={index} className="col--one-fifth mb-s--s">
                                     <Link to={"/ads/" + ad.slug + "=" + ad.id}>
                                         <div className="image-wrapper mb-s--s" style={{ backgroundImage: `url("${ad.productDetails.images[0]}")` }}></div>
@@ -36,7 +35,6 @@ class Home extends Component {
                                     </Link>
                                 </div>
                             ))}
-
                         </div>
                     </div>
                 </div>

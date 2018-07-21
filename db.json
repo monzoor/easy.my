@@ -110,7 +110,7 @@
         "name": "Games & Console",
         "id": 1
       },
-      "wishlist": true,
+      "wishlist": false,
       "productDetails": {
         "price": "1,300",
         "condition": "Second-hand (Used)",

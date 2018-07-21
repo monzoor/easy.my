@@ -1,5 +1,11 @@
 import { GET_AD, NO_AD_FOUND } from './types';
 
+/**
+ * fetch ad details
+ * @param  {[number]} uid  ad uid from url
+ * @param  {[string]} slug ad slug fro url
+ * @return {[object]}      individual id info
+ */
 export function getAd (uid, slug) {
     return (dispatch) => {
         dispatch ({
@@ -24,6 +30,13 @@ export function getAd (uid, slug) {
         })
     }
 }
+
+/**
+ * Update wish list
+ * @param  {[number]} uid      ad uid from url
+ * @param  {[bool]} wishlist   get voolean value by click on the wishlist button
+ * @return {[type]}            individual id info
+ */
 export function updateWishList (uid, wishlist) {
     return (dispatch) => {
         dispatch ({
@@ -53,6 +66,11 @@ export function updateWishList (uid, wishlist) {
     }
 }
 
+/**
+ * [errorDispatch description]
+ * @param  {[method]} dispatch
+ * @param  {[object]} response response from fetch
+ */
 function errorDispatch (dispatch, response){
     dispatch({
         type: NO_AD_FOUND,
