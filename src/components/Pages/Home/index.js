@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import {withRouter, Link} from 'react-router-dom';
+ import BackgroundImage from 'react-background-image-loader';
 
 import { getAds } from './homeAction';
 
+import placeholder from './../../../assets/images/loader.svg';
 class Home extends Component {
 
     componentDidMount() {
@@ -27,7 +29,7 @@ class Home extends Component {
                             {ads.map((ad, index) => (
                                 <div key={index} className="col--one-fifth mb-s--s">
                                     <Link to={"/ads/" + ad.slug + "=" + ad.id}>
-                                        <div className="image-wrapper mb-s--s" style={{ backgroundImage: `url("${ad.productDetails.images[0]}")` }}></div>
+                                        <BackgroundImage className="image-wrapper mb-s--s" src={ad.productDetails.images[0]} placeholder={placeholder}></BackgroundImage>
                                         <p className="h6">
                                             <strong>{ad.name}</strong>
                                         </p>
