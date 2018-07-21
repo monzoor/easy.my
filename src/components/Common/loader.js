@@ -6,7 +6,7 @@ class Loader extends Component {
 
     render() {
         return (
-            <div className="container--fluid center-align">
+            <div className="container--fluid center-align pt-xl--s">
                 <img className="center-align mza" src={loaderImage} alt=""/>
             </div>
         );
